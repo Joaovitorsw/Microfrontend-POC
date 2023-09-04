@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:single-spa:dashboard-angular": "ng build dashboard-angular --prod --deploy-url http://localhost:4200/",
-    "serve:single-spa:dashboard-angular": "ng s --project dashboard-angular --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false"
+    "serve:single-spa:dashboard-angular": "ng s --project dashboard-angular --disable-host-check --port 4200 --deploy-url http://localhost:4200/ --live-reload false",
+    "start": "ng serve --public-host=http://localhost:4200"
   },
   "private": true,
   "dependencies": {

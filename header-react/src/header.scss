@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(46, 240, 133);
+  color: white;
+  text-align: center;
+  line-height: 20vh;
+  height: 20vh;
+  font-size: 42px;
+}

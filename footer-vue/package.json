@@ -1,8 +1,9 @@
 {
-  "name": "@sumit/footer-vue",
+  "name": "@glove-wizard/footer-vue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "vue-cli-service serve --watch",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",

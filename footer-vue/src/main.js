@@ -1,7 +1,7 @@
-import "./set-public-path";
-import { h, createApp } from "vue";
 import singleSpaVue from "single-spa-vue";
+import { createApp, h } from "vue";
 import App from "./App.vue";
+import "./set-public-path";
 const vueLifecycles = singleSpaVue({
   createApp,
   appOptions: {
@@ -9,9 +9,9 @@ const vueLifecycles = singleSpaVue({
       return h(App, {
         name: this.name,
         mountParcel: this.mountParcel,
-        singleSpa: this.singleSpa
+        singleSpa: this.singleSpa,
       });
-    }
+    },
   },
 });
 export const bootstrap = vueLifecycles.bootstrap;

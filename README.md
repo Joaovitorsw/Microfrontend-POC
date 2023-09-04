@@ -1,24 +1,21 @@
 # Microfrontend-POC
 
-# Setup steps
-1. Go to Header-React Folder
-2. open terminal and do `npm i`
-3. Start application by `npm start -- --port 8500`
+# Etapas de configuração
 
+1. Vá para a pasta Header-React
+2. abra o terminal e faça `npm i`
+3. Inicie o aplicativo por `npm start -- --port 8500`
 
-4. Go to Dashboard-Angular folder
-5. open terminal and do `npm i`
-6. Start application by `npm run serve:single-spa:dashboard-angular`
+4. Vá para a pasta Dashboard-Angular
+5. abra o terminal e faça `npm i`
+6. Inicie o aplicativo por `npm run serve:single-spa:dashboard-angular`
 
-7. Go to Footer-Vue folder
-8. open terminal and do `npm i`
-9. Start application by `npm run serve`
+7. Vá para a pasta Footer-Vue
+8. abra o terminal e faça `npm i`
+9. Inicie o aplicativo por `npm run serve`
 
-10. Go to shell folder
-11. Open terminal and do `npm i`
-12. start application by `npm start`
+10. Vá para a pasta shell
+11. Abra o terminal e faça `npm i`
+12. inicie o aplicativo por `npm start`
 
-After completing all above steps navigate to on http://localhost:9000/ and you will see your application containing all three frameworks.
-
-
-To know more about project setup refer my article https://sumitaec108.medium.com/micro-frontends-part2-angular-react-vue-together-in-an-app-499f8be1510a
+Depois de concluir todas as etapas acima, navegue até http://localhost:9000/ e você verá seu aplicativo contendo todos os três frameworks.

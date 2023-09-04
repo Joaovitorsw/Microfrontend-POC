@@ -1,21 +1,20 @@
-
+import { ɵAnimationEngine as AnimationEngine } from '@angular/animations/browser';
 import { enableProdMode, NgZone } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { ɵAnimationEngine as AnimationEngine } from '@angular/animations/browser';
 
 import { singleSpaAngular } from 'single-spa-angular';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-import { singleSpaPropsSubject } from './single-spa/single-spa-props';
 import './set-public-path';
+import { singleSpaPropsSubject } from './single-spa/single-spa-props';
 
 if (environment.production) {
   enableProdMode();
 }
 
 const lifecycles = singleSpaAngular({
-  bootstrapFunction: singleSpaProps => {
+  bootstrapFunction: (singleSpaProps) => {
     singleSpaPropsSubject.next(singleSpaProps);
     return platformBrowserDynamic().bootstrapModule(AppModule);
   },

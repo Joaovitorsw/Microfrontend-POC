@@ -3,13 +3,21 @@ const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: "sumit",
+    orgName: "glove-wizard",
     projectName: "header-react",
     webpackConfigEnv,
     argv,
   });
 
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    // modifique a configuração do webpack como desejar, adicionando a este objeto,
+    module: {
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: ["style-loader", "css-loader", "sass-loader"],
+        },
+      ],
+    },
   });
 };

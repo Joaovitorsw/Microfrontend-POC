@@ -1,6 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/sumit-root-config.ts"],
+  "files": ["src/glove-wizard-root-config.ts"],
   "compilerOptions": {
     "declarationDir": "dist"
   },

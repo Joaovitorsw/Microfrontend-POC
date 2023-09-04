@@ -1,2 +1,2 @@
 import { setPublicPath } from "systemjs-webpack-interop";
-setPublicPath("@sumit/dashboard-angular");
+setPublicPath("@glove-wizard/dashboard-angular");

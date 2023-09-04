@@ -1,3 +1,7 @@
 <div class="dashboard">
-  <div>Dashboard (Angular)</div>
+  <div>
+    <span (click)="log($event)" *ngFor="let item of list">{{
+      item.message
+    }}</span>
+  </div>
 </div>

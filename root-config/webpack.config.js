@@ -1,9 +1,10 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = (webpackConfigEnv, argv) => {
-  const orgName = "sumit";
+  const orgName = "glove-wizard";
   const defaultConfig = singleSpaDefaults({
     orgName,
     projectName: "root-config",
@@ -11,15 +12,21 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
     disableHtmlGeneration: true,
   });
-
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    devServer: {
+      port: 9000,
+      hot: "only",
+      static: {
+        directory: path.join(__dirname, "../"),
+        serveIndex: true,
+      },
+    },
     plugins: [
       new HtmlWebpackPlugin({
         inject: false,
         template: "src/index.ejs",
         templateParameters: {
-          isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
+          isLocal: webpackConfigEnv ?? webpackConfigEnv.isLocal,
           orgName,
         },
       }),
